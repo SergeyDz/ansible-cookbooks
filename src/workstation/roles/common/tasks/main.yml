@@ -1,7 +1,7 @@
 ---
 # This Playbook runs all the common plays in the deployment
 
-- name: Install nano
+- name: Install local basic packages
   apt:
     pkg: 
         - nano
