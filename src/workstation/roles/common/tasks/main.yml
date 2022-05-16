@@ -2,7 +2,8 @@
 # This Playbook runs all the common plays in the deployment
 
 - name: Install nano
-  pkg: 
-    - nano
-    - htop
-    - mc
+  apt:
+    pkg: 
+        - nano
+        - htop
+        - mc
