@@ -1,2 +1,4 @@
-[all]
+# Provision local environment 
+
+[local]
 localhost
