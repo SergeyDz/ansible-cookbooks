@@ -1,4 +1,4 @@
 # Provision local environment 
 
 [local]
-localhost
+localhost ansible_connection=local
