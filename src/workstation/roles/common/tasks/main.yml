@@ -3,7 +3,11 @@
 
 - name: Install local basic packages
   apt:
-    pkg: 
-        - nano
-        - htop
-        - mc
+    name: "{{item}}"
+      state: present
+      update_cache: yes
+    loop:
+      - nano
+      - mc
+      - curl
+      - htop
