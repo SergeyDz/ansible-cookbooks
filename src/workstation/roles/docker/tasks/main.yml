@@ -11,7 +11,6 @@
     - curl
     - gnupg-agent
     - software-properties-common
-    - docker-py
 
 - name: add GPG 
   become: true
@@ -33,9 +32,22 @@
     - docker-ce
     - docker-ce-cli
     - containerd.io
+
 - name: start docker
   become: true
   service:
     name: docker
     state: started
     enabled: yes
+
+- name: install python dependencies
+  become: true
+  apt:
+    update_cache: yes
+    state: latest
+    name: python3-pip
+
+- name: install 'Docker SDK for Python'
+  #become: true <--- DO NOT DO THIS!!!
+  pip:
+    name: docker
