@@ -2,6 +2,7 @@
 # This Playbook runs all the common plays in the deployment
 
 - name: Install local basic packages
+  become: true
   apt:
     name: "{{item}}"
     state: present
