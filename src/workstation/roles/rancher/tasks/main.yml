@@ -6,7 +6,7 @@
     recreate: yes
     privileged: yes
     restart: yes
-    detatch: yes
+    detach: yes
     exposed_ports:
       - 80
       - 443
