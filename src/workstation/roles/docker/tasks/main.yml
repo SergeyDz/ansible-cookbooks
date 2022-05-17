@@ -12,15 +12,17 @@
     - gnupg-agent
     - software-properties-common
 
-- name: aggiungi chiave GPG
+- name: add GPG 
+  become: true
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
-- name: aggiungi repository docker
+- name: assign repository docker
+  become: true
   apt_repository:
     repo: deb https://download.docker.com/linux/ubuntu bionic stable
     state: present
-- name: installa docker
+- name: install docker
   become: true
   apt:
     name: "{{item}}"
@@ -30,7 +32,8 @@
     - docker-ce
     - docker-ce-cli
     - containerd.io
-- name: assicurati che docker sia attivo
+- name: start docker
+  become: true
   service:
     name: docker
     state: started
