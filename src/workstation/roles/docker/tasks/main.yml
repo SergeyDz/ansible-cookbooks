@@ -16,6 +16,12 @@
 
 - meta: reset_connection                # <--- must do this if using pipelining
 
+- name: Wait for port 22.
+  wait_for_connection:
+    delay: 60
+    timeout: 600
+  delegate_to: localhost
+
 ## Setup docker
 - name: install dependencies
   become: true
