@@ -11,6 +11,7 @@
     - curl
     - gnupg-agent
     - software-properties-common
+    - docker-py
 
 - name: add GPG 
   become: true
