@@ -1,0 +1,1 @@
+usermod -aG sudo cloud_user
