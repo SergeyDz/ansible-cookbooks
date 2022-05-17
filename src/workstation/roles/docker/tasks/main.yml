@@ -1,5 +1,6 @@
 ---
 - name: installa dipendenze
+  become: true
   apt:
     name: "{{item}}"
     state: present
@@ -20,6 +21,7 @@
     repo: deb https://download.docker.com/linux/ubuntu bionic stable
     state: present
 - name: installa docker
+  become: true
   apt:
     name: "{{item}}"
     state: latest
