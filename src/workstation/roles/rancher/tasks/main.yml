@@ -1,11 +1,11 @@
 - name: Re-create a redis container
   docker_container:
-    name: myredis
-    image: redis
-    command: redis-server --appendonly yes
+    name: rancher
+    image: rancher/rancher
     state: present
     recreate: yes
+    privileged: yes
+    restart: yes
     exposed_ports:
-      - 6379
-    volumes_from:
-      - mydata
+      - 80
+      - 443
