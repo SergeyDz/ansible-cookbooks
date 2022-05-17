@@ -3,10 +3,10 @@
     name: rancher
     image: rancher/rancher
     #state: present
-    #recreate: yes
+    recreate: yes
     privileged: yes
     #restart: yes
     detach: yes
-    exposed_ports:
-      - 80:80
-      - 443:443
+    ports:
+      - "80:80"
+      - "443:443"
