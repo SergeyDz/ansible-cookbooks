@@ -1,1 +1,1 @@
-test: test
+ansible_user: cloud_user
