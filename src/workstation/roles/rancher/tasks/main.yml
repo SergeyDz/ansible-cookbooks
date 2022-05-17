@@ -1,5 +1,4 @@
 - name: Re-create a redis container
-  become: true
   docker_container:
     name: myredis
     image: redis
