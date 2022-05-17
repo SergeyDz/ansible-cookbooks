@@ -1,5 +1,5 @@
 ---
-- name: installa dipendenze
+- name: install dips
   become: true
   apt:
     name: "{{item}}"
