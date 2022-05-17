@@ -1,12 +1,12 @@
-- name: Re-create a redis container
+- name: Start rancher container
   docker_container:
     name: rancher
     image: rancher/rancher
-    state: present
-    recreate: yes
+    #state: present
+    #recreate: yes
     privileged: yes
-    restart: yes
+    #restart: yes
     detach: yes
     exposed_ports:
-      - 80
-      - 443
+      - 80:80
+      - 443:443
