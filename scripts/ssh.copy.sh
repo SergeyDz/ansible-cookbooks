@@ -1,0 +1,1 @@
+ssh-copy-id -i ~/.ssh/id_rsa.pub cloud_user@13.40.179.168
