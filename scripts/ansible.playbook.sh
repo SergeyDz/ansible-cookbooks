@@ -1,4 +1,4 @@
 cd ../src/workstation
 
 ansible-galaxy install -p roles -r roles/requirements.yml
-ansible-playbool main.yml -i hosts
+ansible-playbook main.yml -i hosts
