@@ -28,3 +28,15 @@
   loop:
     - ansible-generator
   when: "'local' in group_names"
+
+- name: Add a user.name to ~/.gitconfig
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: Sergey Dzyuban
+
+- name: Add a user.email to ~/.gitconfig
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: dzyuban@gmail.com
