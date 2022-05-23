@@ -15,6 +15,6 @@
 
 - name: install common pip modules
   pip:
-    - ansible-generator
-    - glances
+    name: ansible-generator
+    state: present
   when: "'local' in group_names"
