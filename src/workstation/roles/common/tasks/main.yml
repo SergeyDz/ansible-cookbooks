@@ -13,8 +13,10 @@
     - curl
     - htop
 
-- name: install required pip modules
+- name: install common pip modules
   pip:
-    name: ansible-generator
-    state: present
+    - name: ansible-generator
+      state: latest
+    - name: glances
+      state: present 
   when: "'local' in group_names"
