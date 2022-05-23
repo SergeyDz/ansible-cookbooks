@@ -18,6 +18,13 @@
     name: "{{item}}"
     state: latest
   loop:
-    - ansible-generator
     - glances
+
+
+- name: install workstation pip modules
+  pip:
+    name: "{{item}}"
+    state: latest
+  loop:
+    - ansible-generator
   when: "'local' in group_names"
