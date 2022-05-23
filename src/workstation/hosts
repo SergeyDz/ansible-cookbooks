@@ -4,4 +4,4 @@
 localhost ansible_connection=local
 
 [k8s]
-cloud_user@18.169.16.212
+cloud_user@18.130.250.80
