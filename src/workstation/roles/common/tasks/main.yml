@@ -15,6 +15,10 @@
 
 - name: install common pip modules
   pip:
-    name: ansible-generator
-    state: present
+    name: "{{item}}"
+    state: latest
+    update_cache: yes
+  loop:
+    - ansible-generator
+    - glances
   when: "'local' in group_names"
