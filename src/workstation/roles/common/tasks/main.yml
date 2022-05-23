@@ -5,10 +5,16 @@
   become: true
   apt:
     name: "{{item}}"
-    state: present
+    state: latest
     update_cache: yes
   loop:
     - nano
     - mc
     - curl
     - htop
+
+- name: install required pip modules
+  pip:
+    name: ansible-generator
+    state: present
+  when: "'local' in group_names"
