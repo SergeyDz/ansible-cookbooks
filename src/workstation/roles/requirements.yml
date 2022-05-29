@@ -3,3 +3,8 @@
   name: ansible-consul
   scm: git
   version: master
+
+- src: https://github.com/gantsign/ansible-role-golang.git
+  name: gantsign.golang
+  scm: git
+  version: master

@@ -4,6 +4,8 @@
   roles:
   - role: common
   - role: docker
+  - role: gantsign.golang
+    golang_gopath: '$HOME/workspace-go'
 
 - hosts: k8s
   roles: 
