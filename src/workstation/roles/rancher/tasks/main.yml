@@ -7,7 +7,7 @@
     privileged: yes
     #restart: yes
     detach: yes
-    publish_all_ports: yes
+    # publish_all_ports: yes -- not supported in never docker versions
     ports:
       - "80:80"
       - "443:443"
