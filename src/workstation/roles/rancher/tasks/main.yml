@@ -9,5 +9,5 @@
     detach: yes
     # publish_all_ports: yes -- not supported in never docker versions
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "8043:443"
